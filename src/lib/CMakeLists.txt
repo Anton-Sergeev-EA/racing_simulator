@@ -8,6 +8,7 @@ add_library(RaceLib SHARED
     src/MixedRace.cpp
     src/RaceSimulator.cpp
     src/VehicleFactory.cpp
+    src/Race.cpp
 )
 
 target_include_directories(RaceLib 
@@ -23,3 +24,4 @@ if(WIN32)
 endif()
 
 target_compile_features(RaceLib PUBLIC cxx_std_20)
+

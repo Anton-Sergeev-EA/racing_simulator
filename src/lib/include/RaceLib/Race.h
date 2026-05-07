@@ -1,5 +1,6 @@
 #pragma once
 #include "Vehicle.h"
+#include "RaceLibExport.h"
 #include <memory>
 #include <vector>
 #include <unordered_map>
@@ -9,7 +10,7 @@ namespace RaceLib {
 
 enum class RaceType { Ground, Air, Mixed };
 
-class Race {
+class RACELIB_API Race {
 public:
     virtual ~Race() = default;
     virtual bool canRegister(const Vehicle& vehicle) const = 0;

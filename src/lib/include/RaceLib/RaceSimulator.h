@@ -1,11 +1,12 @@
 #pragma once
 #include "Race.h"
+#include "RaceLibExport.h"
 #include <memory>
 #include <vector>
 
 namespace RaceLib {
 
-class RaceSimulator {
+class RACELIB_API RaceSimulator {
 public:
     RaceSimulator(std::unique_ptr<Race> race, double distance);
     bool registerVehicle(std::unique_ptr<Vehicle> vehicle);
