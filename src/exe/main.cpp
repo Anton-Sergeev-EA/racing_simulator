@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <clocale>
 #include "RaceLib/Race.h"
 #include "RaceLib/GroundRace.h"
 #include "RaceLib/AirRace.h"
@@ -17,10 +18,12 @@ void printVehicles() {
 }
 
 int main() {
+    setlocale(LC_ALL, "ru_RU.UTF-8");
+    
     bool exitProgram = false;
     
     while (!exitProgram) {
-        std::cout << "\n=== СИМУЛЯТОР ГОНОК ===\n";
+        std::cout << "\nСИМУЛЯТОР ГОНОК\n";
         std::cout << "Выберите тип гонки:\n";
         std::cout << "1. Только наземные\n";
         std::cout << "2. Только воздушные\n";
@@ -95,7 +98,7 @@ int main() {
                     continue;
                 }
                 
-                std::cout << "\n=== РЕЗУЛЬТАТЫ ГОНКИ ===\n";
+                std::cout << "\nРЕЗУЛЬТАТЫ ГОНКИ\n";
                 for (const auto& [name, time] : results) {
                     std::cout << name << " -> " << time << " часов\n";
                 }

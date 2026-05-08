@@ -19,6 +19,8 @@ public:
     void registerVehicle(std::unique_ptr<Vehicle> vehicle);
     std::vector<std::pair<std::string, double>> runRace(double distance) const;
     
+    size_t getVehiclesCount() const { return m_vehicles.size(); }
+    
 protected:
     std::vector<std::unique_ptr<Vehicle>> m_vehicles;
     std::unordered_map<std::string, bool> m_registeredNames;

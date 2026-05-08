@@ -1,9 +1,10 @@
 #pragma once
 #include "Race.h"
+#include "RaceLibExport.h"
 
 namespace RaceLib {
 
-class AirRace : public Race {
+class RACELIB_API AirRace : public Race {
 public:
     bool canRegister(const Vehicle& vehicle) const override;
     RaceType getType() const override { return RaceType::Air; }

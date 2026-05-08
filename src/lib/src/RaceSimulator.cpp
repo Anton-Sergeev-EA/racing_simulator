@@ -14,7 +14,7 @@ bool RaceSimulator::registerVehicle(std::unique_ptr<Vehicle> vehicle) {
 }
 
 std::vector<std::pair<std::string, double>> RaceSimulator::startRace() {
-    if (m_race->m_vehicles.size() < 2) {
+    if (m_race->getVehiclesCount() < 2) {
         return {};
     }
     return m_race->runRace(m_distance);

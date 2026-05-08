@@ -1,6 +1,7 @@
 #include "RaceLib/VehicleFactory.h"
 #include "RaceLib/GroundVehicle.h"
 #include "RaceLib/AirVehicle.h"
+#include <cmath>
 
 namespace RaceLib {
 
